@@ -24,42 +24,54 @@
     imageViewBackground.image = imageBackground;
     [self.view addSubview:imageViewBackground];
     
-    // circle image
-    int circleImageRadius = 40;
+    // circle buttons
+    float buttonCircleRadius = 40;
     CGColorRef colorVacant = [[UIColor colorWithRed:0.0 green:0.9 blue:1.0 alpha:1.0] CGColor];
-    float borderWidth = 1.0;
+    
     // - 1. penguin
-    UIImageView *imageViewPenguin = [[UIImageView alloc] initWithFrame:CGRectMake(240, 239, circleImageRadius*2, circleImageRadius*2)];
-    imageViewPenguin.contentMode = UIViewContentModeScaleAspectFit;
-    UIImage *imagePenguin = [UIImage imageNamed:@"penguin.jpg"];
-    imageViewPenguin.image = imagePenguin;
-    imageViewPenguin.layer.cornerRadius = imageViewPenguin.frame.size.width / 2.f;
-    imageViewPenguin.layer.masksToBounds = YES;
-    imageViewPenguin.layer.borderColor = colorVacant;
-    imageViewPenguin.layer.borderWidth = borderWidth;
-    [self.view addSubview:imageViewPenguin];
+    UIButton *buttonPenguin = [UIButton buttonWithType:UIButtonTypeCustom];
+    [buttonPenguin setImage:[UIImage imageNamed:@"penguin.jpg"] forState:UIControlStateNormal];
+    [buttonPenguin addTarget:self action:@selector(buttonPenguinTapped:) forControlEvents:UIControlEventTouchUpInside];
+    buttonPenguin.frame = CGRectMake(240, 239, buttonCircleRadius*2, buttonCircleRadius*2);
+    buttonPenguin.clipsToBounds = YES;
+    buttonPenguin.layer.cornerRadius = buttonCircleRadius;
+    buttonPenguin.layer.borderColor = colorVacant;
+    buttonPenguin.layer.borderWidth=2.0f;
+    [self.view addSubview:buttonPenguin];
     
     // - 2. bonsai
-    UIImageView *imageViewBonsai = [[UIImageView alloc] initWithFrame:CGRectMake(240, 325, circleImageRadius*2, circleImageRadius*2)];
-    imageViewBonsai.contentMode = UIViewContentModeScaleAspectFit;
-    UIImage *imageBonsai = [UIImage imageNamed:@"bonsai.jpg"];
-    imageViewBonsai.image = imageBonsai;
-    imageViewBonsai.layer.cornerRadius = imageViewBonsai.frame.size.width / 2.f;
-    imageViewBonsai.layer.masksToBounds = YES;
-    imageViewBonsai.layer.borderColor = colorVacant;
-    imageViewBonsai.layer.borderWidth = borderWidth;
-    [self.view addSubview:imageViewBonsai];
+    UIButton *buttonBonsai = [UIButton buttonWithType:UIButtonTypeCustom];
+    [buttonBonsai setImage:[UIImage imageNamed:@"bonsai.jpg"] forState:UIControlStateNormal];
+    [buttonBonsai addTarget:self action:@selector(buttonBonsaiTapped:) forControlEvents:UIControlEventTouchUpInside];
+    buttonBonsai.frame = CGRectMake(240, 325, buttonCircleRadius*2, buttonCircleRadius*2);
+    buttonBonsai.clipsToBounds = YES;
+    buttonBonsai.layer.cornerRadius = buttonCircleRadius;
+    buttonBonsai.layer.borderColor = colorVacant;
+    buttonBonsai.layer.borderWidth=2.0f;
+    [self.view addSubview:buttonBonsai];
     
     // - 3. box
-    UIImageView *imageViewBox = [[UIImageView alloc] initWithFrame:CGRectMake(240, 412, circleImageRadius*2, circleImageRadius*2)];
-    imageViewBox.contentMode = UIViewContentModeScaleAspectFit;
-    UIImage *imageBox = [UIImage imageNamed:@"box.jpg"];
-    imageViewBox.image = imageBox;
-    imageViewBox.layer.cornerRadius = imageViewBox.frame.size.width / 2.f;
-    imageViewBox.layer.masksToBounds = YES;
-    imageViewBox.layer.borderColor = colorVacant;
-    imageViewBox.layer.borderWidth = borderWidth;
-    [self.view addSubview:imageViewBox];
+    UIButton *buttonBox = [UIButton buttonWithType:UIButtonTypeCustom];
+    [buttonBox setImage:[UIImage imageNamed:@"box.jpg"] forState:UIControlStateNormal];
+    [buttonBox addTarget:self action:@selector(buttonBoxTapped:) forControlEvents:UIControlEventTouchUpInside];
+    buttonBox.frame = CGRectMake(240, 412, buttonCircleRadius*2, buttonCircleRadius*2);
+    buttonBox.clipsToBounds = YES;
+    buttonBox.layer.cornerRadius = buttonCircleRadius;
+    buttonBox.layer.borderColor = colorVacant;
+    buttonBox.layer.borderWidth=2.0f;
+    [self.view addSubview:buttonBox];
+}
+
+- (void)buttonPenguinTapped:(UIButton*)tappedButton{
+    NSLog(@"buttonPenguin tapped");
+}
+
+- (void)buttonBonsaiTapped:(UIButton*)tappedButton{
+    NSLog(@"buttonBonsai tapped");
+}
+
+- (void)buttonBoxTapped:(UIButton*)tappedButton{
+    NSLog(@"buttonBox tapped");
 }
 
 - (void)didReceiveMemoryWarning {
