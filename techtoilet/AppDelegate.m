@@ -1,11 +1,3 @@
-//
-//  AppDelegate.m
-//  techtoilet
-//
-//  Created by 藤賀 雄太 on 2015/09/29.
-//
-//
-
 #import "AppDelegate.h"
 
 @interface AppDelegate ()

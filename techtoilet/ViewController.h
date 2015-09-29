@@ -1,15 +1,11 @@
-//
-//  ViewController.h
-//  techtoilet
-//
-//  Created by 藤賀 雄太 on 2015/09/29.
-//
-//
-
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface ViewController : UIViewController
+#define IS_PAD  (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)
 
+@interface ViewController : UIViewController{
+    UILabel *labelFloor;
+}
 
 @end
 
