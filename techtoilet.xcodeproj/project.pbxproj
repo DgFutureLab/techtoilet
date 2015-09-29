@@ -18,6 +18,9 @@
 		B207B89D1BBA9C1B004A84E1 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = B207B89C1BBA9C1B004A84E1 /* 11.png */; };
 		B207B8A51BBAA483004A84E1 /* box.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B207B8A41BBAA483004A84E1 /* box.jpg */; };
 		B207B8A71BBAA4E6004A84E1 /* bonsai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B207B8A61BBAA4E6004A84E1 /* bonsai.jpg */; };
+		B207B8AA1BBAB00E004A84E1 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B207B8A91BBAB00E004A84E1 /* DataViewController.m */; };
+		B207B8AC1BBAB16D004A84E1 /* usageRate.png in Resources */ = {isa = PBXBuildFile; fileRef = B207B8AB1BBAB16D004A84E1 /* usageRate.png */; };
+		B23D9C2E1BBAB69E00325105 /* frequencyOfUse.png in Resources */ = {isa = PBXBuildFile; fileRef = B23D9C2D1BBAB69E00325105 /* frequencyOfUse.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,10 @@
 		B207B89C1BBA9C1B004A84E1 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
 		B207B8A41BBAA483004A84E1 /* box.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = box.jpg; sourceTree = "<group>"; };
 		B207B8A61BBAA4E6004A84E1 /* bonsai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bonsai.jpg; sourceTree = "<group>"; };
+		B207B8A81BBAB00E004A84E1 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		B207B8A91BBAB00E004A84E1 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		B207B8AB1BBAB16D004A84E1 /* usageRate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usageRate.png; sourceTree = "<group>"; };
+		B23D9C2D1BBAB69E00325105 /* frequencyOfUse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frequencyOfUse.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +100,8 @@
 				B207B83E1BBA87DE004A84E1 /* AppDelegate.m */,
 				B207B8401BBA87DE004A84E1 /* ViewController.h */,
 				B207B8411BBA87DE004A84E1 /* ViewController.m */,
+				B207B8A81BBAB00E004A84E1 /* DataViewController.h */,
+				B207B8A91BBAB00E004A84E1 /* DataViewController.m */,
 				B207B8431BBA87DE004A84E1 /* Main.storyboard */,
 				B207B8461BBA87DE004A84E1 /* Images.xcassets */,
 				B207B8481BBA87DE004A84E1 /* LaunchScreen.xib */,
@@ -104,6 +113,8 @@
 		B207B8391BBA87DE004A84E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B23D9C2D1BBAB69E00325105 /* frequencyOfUse.png */,
+				B207B8AB1BBAB16D004A84E1 /* usageRate.png */,
 				B207B8A61BBAA4E6004A84E1 /* bonsai.jpg */,
 				B207B8A41BBAA483004A84E1 /* box.jpg */,
 				B207B89C1BBA9C1B004A84E1 /* 11.png */,
@@ -211,8 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B207B89D1BBA9C1B004A84E1 /* 11.png in Resources */,
+				B207B8AC1BBAB16D004A84E1 /* usageRate.png in Resources */,
 				B207B8951BBA963F004A84E1 /* penguin.jpg in Resources */,
 				B207B8451BBA87DE004A84E1 /* Main.storyboard in Resources */,
+				B23D9C2E1BBAB69E00325105 /* frequencyOfUse.png in Resources */,
 				B207B84A1BBA87DE004A84E1 /* LaunchScreen.xib in Resources */,
 				B207B8A71BBAA4E6004A84E1 /* bonsai.jpg in Resources */,
 				B207B8A51BBAA483004A84E1 /* box.jpg in Resources */,
@@ -234,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B207B8AA1BBAB00E004A84E1 /* DataViewController.m in Sources */,
 				B207B8421BBA87DE004A84E1 /* ViewController.m in Sources */,
 				B207B83F1BBA87DE004A84E1 /* AppDelegate.m in Sources */,
 				B207B83C1BBA87DE004A84E1 /* main.m in Sources */,
@@ -433,6 +447,7 @@
 				B207B85B1BBA87DE004A84E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B207B85C1BBA87DE004A84E1 /* Build configuration list for PBXNativeTarget "techtoiletTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +456,7 @@
 				B207B85E1BBA87DE004A84E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

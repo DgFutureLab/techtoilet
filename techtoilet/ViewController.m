@@ -1,4 +1,5 @@
 #import "ViewController.h"
+#import "DataViewController.h"
 
 @interface ViewController ()
 
@@ -64,14 +65,20 @@
 
 - (void)buttonPenguinTapped:(UIButton*)tappedButton{
     NSLog(@"buttonPenguin tapped");
+    DataViewController *dataViewController = [[DataViewController alloc] init];
+    [self.navigationController pushViewController:dataViewController animated:YES];
 }
 
 - (void)buttonBonsaiTapped:(UIButton*)tappedButton{
     NSLog(@"buttonBonsai tapped");
+    DataViewController *dataViewController = [[DataViewController alloc] init];
+    [self.navigationController pushViewController:dataViewController animated:YES];
 }
 
 - (void)buttonBoxTapped:(UIButton*)tappedButton{
     NSLog(@"buttonBox tapped");
+    DataViewController *dataViewController = [[DataViewController alloc] init];
+    [self.navigationController pushViewController:dataViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
