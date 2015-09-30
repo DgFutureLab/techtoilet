@@ -34,4 +34,60 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(NSDictionary *)getData:(NSString*)parameter{
+    NSLog(@"AppDelegate-getData");
+    // get data
+    NSString *url;
+    if (parameter) {
+        url = [@"http://satoyamacloud.com/" stringByAppendingString: parameter];
+    }else{
+        url = @"http://satoyamacloud.com/readings?sensor_id=10";
+    }
+    //NSURLからNSURLRequestを作る
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    //サーバーとの通信を行う
+    NSData *json = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    if (json != nil) {
+        NSLog(@"AppDelegate-getData: succussed");
+        // read json data
+        NSDictionary *result = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"data: %d", [[[result valueForKey:@"objects"][0] valueForKey:@"value"] boolValue]);
+//        //ローカルに保存
+//        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//        NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:result];
+//        if ([[result valueForKey:@"status"] intValue] != 429) {
+//            [defaults setObject:dataSave forKey:[@"cache/node/" stringByAppendingString:parameter]];
+//            BOOL successful = [defaults synchronize];
+//            if (successful) {
+//                NSLog(@"AppDelegate-getDistance: saved data successfully.");
+//            }
+//            return result;
+//        }else{
+//            //too many requests
+//            NSLog(@"error: %@", result);
+//            NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:[@"cache/node/" stringByAppendingString:parameter]];
+//            NSDictionary *savedDictionary = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+//            if (savedDictionary) {
+//                return savedDictionary;
+//            } else {
+//                NSLog(@"AppDelegate-getDistance: %@", @"no data in cache.");
+//                return 0;
+//            }
+//        }
+    }else{
+        NSLog(@"AppDelegate-getData: failed");
+//        NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:[@"cache/node/" stringByAppendingString:parameter]];
+//        NSDictionary *savedDictionary = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+//        if (savedDictionary) {
+//            return savedDictionary;
+//        } else {
+//            NSLog(@"AppDelegate-getDistance: %@", @"no data in cache.");
+//            return 0;
+//        }
+    }
+    
+    NSDictionary *foo;
+    return foo;
+}
+
 @end

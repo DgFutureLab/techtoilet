@@ -4,6 +4,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+-(NSDictionary*)getData:(NSString*)parameter;
 
 @end
 

@@ -61,7 +61,32 @@
     buttonBox.layer.borderColor = colorVacant;
     buttonBox.layer.borderWidth=2.0f;
     [self.view addSubview:buttonBox];
+    
+    // timer
+    [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(update:) userInfo:nil repeats:YES];
+    
+    // appDelegate
+    appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    settingData = [defaults objectForKey:@"cache/setting"];
+//    if (!settingData) {
+//        NSLog(@"%@", @"ViewController_viewDidLoad: no setting data in cache");
+//        _minimumWaterLevel = 0;
+//        _currentSite = [[[[appDelegate getData:@"sites"] objectForKey:@"objects"][0] objectForKey:@"id"] intValue];
+//        _demo = false;
+//    }else{
+//        NSLog(@"%@", settingData);
+//        _currentSite = [[settingData objectForKey:@"site"] intValue];
+//        _minimumWaterLevel = [[settingData objectForKey:@"minimumWaterLevel"] intValue];
+//        _demo = [[settingData objectForKey:@"demo"] boolValue];
+//    }
 }
+
+-(void)update:(NSTimer*)timer{
+    NSLog(@"update");
+    [appDelegate getData:nil];
+}
+
 
 - (void)buttonPenguinTapped:(UIButton*)tappedButton{
     NSLog(@"buttonPenguin tapped");
