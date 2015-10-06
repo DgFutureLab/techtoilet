@@ -21,6 +21,7 @@
 		B207B8AA1BBAB00E004A84E1 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B207B8A91BBAB00E004A84E1 /* DataViewController.m */; };
 		B207B8AC1BBAB16D004A84E1 /* usageRate.png in Resources */ = {isa = PBXBuildFile; fileRef = B207B8AB1BBAB16D004A84E1 /* usageRate.png */; };
 		B23D9C2E1BBAB69E00325105 /* frequencyOfUse.png in Resources */ = {isa = PBXBuildFile; fileRef = B23D9C2D1BBAB69E00325105 /* frequencyOfUse.png */; };
+		B24AD38D1BC37025005C016B /* penguin_occupied.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B24AD38C1BC37025005C016B /* penguin_occupied.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B207B8A91BBAB00E004A84E1 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		B207B8AB1BBAB16D004A84E1 /* usageRate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usageRate.png; sourceTree = "<group>"; };
 		B23D9C2D1BBAB69E00325105 /* frequencyOfUse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frequencyOfUse.png; sourceTree = "<group>"; };
+		B24AD38C1BC37025005C016B /* penguin_occupied.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = penguin_occupied.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		B207B8391BBA87DE004A84E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B24AD38C1BC37025005C016B /* penguin_occupied.jpg */,
 				B23D9C2D1BBAB69E00325105 /* frequencyOfUse.png */,
 				B207B8AB1BBAB16D004A84E1 /* usageRate.png */,
 				B207B8A61BBAA4E6004A84E1 /* bonsai.jpg */,
@@ -223,6 +226,7 @@
 			files = (
 				B207B89D1BBA9C1B004A84E1 /* 11.png in Resources */,
 				B207B8AC1BBAB16D004A84E1 /* usageRate.png in Resources */,
+				B24AD38D1BC37025005C016B /* penguin_occupied.jpg in Resources */,
 				B207B8951BBA963F004A84E1 /* penguin.jpg in Resources */,
 				B207B8451BBA87DE004A84E1 /* Main.storyboard in Resources */,
 				B23D9C2E1BBAB69E00325105 /* frequencyOfUse.png in Resources */,

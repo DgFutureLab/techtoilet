@@ -51,7 +51,7 @@
         NSLog(@"AppDelegate-getData: succussed");
         // read json data
         NSDictionary *result = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"data: %d", [[[result valueForKey:@"objects"][0] valueForKey:@"value"] boolValue]);
+        return result;
 //        //ローカルに保存
 //        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 //        NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:result];
@@ -84,10 +84,9 @@
 //            NSLog(@"AppDelegate-getDistance: %@", @"no data in cache.");
 //            return 0;
 //        }
+        NSDictionary *foo;
+        return foo;
     }
-    
-    NSDictionary *foo;
-    return foo;
 }
 
 @end

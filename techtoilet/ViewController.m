@@ -30,7 +30,7 @@
     CGColorRef colorVacant = [[UIColor colorWithRed:0.0 green:0.9 blue:1.0 alpha:1.0] CGColor];
     
     // - 1. penguin
-    UIButton *buttonPenguin = [UIButton buttonWithType:UIButtonTypeCustom];
+    buttonPenguin = [UIButton buttonWithType:UIButtonTypeCustom];
     [buttonPenguin setImage:[UIImage imageNamed:@"penguin.jpg"] forState:UIControlStateNormal];
     [buttonPenguin addTarget:self action:@selector(buttonPenguinTapped:) forControlEvents:UIControlEventTouchUpInside];
     buttonPenguin.frame = CGRectMake(240, 239, buttonCircleRadius*2, buttonCircleRadius*2);
@@ -84,9 +84,17 @@
 
 -(void)update:(NSTimer*)timer{
     NSLog(@"update");
-    [appDelegate getData:nil];
+    NSDictionary *data = [appDelegate getData:nil];
+    NSLog(@"data: %d", [[[data valueForKey:@"objects"][0] valueForKey:@"value"] boolValue]);
+    bool toiletStatus = [[[data valueForKey:@"objects"][0] valueForKey:@"value"] boolValue];
+    if (toiletStatus) {
+        // change image to occupied
+        [buttonPenguin setImage:[UIImage imageNamed:@"penguin_occupied.jpg"] forState:UIControlStateNormal];
+    }else{
+        // change image to vacant
+        [buttonPenguin setImage:[UIImage imageNamed:@"penguin.jpg"] forState:UIControlStateNormal];
+    }
 }
-
 
 - (void)buttonPenguinTapped:(UIButton*)tappedButton{
     NSLog(@"buttonPenguin tapped");

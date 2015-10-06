@@ -7,6 +7,7 @@
 @interface ViewController : UIViewController{
     AppDelegate *appDelegate;
     UILabel *labelFloor;
+    UIButton *buttonPenguin;
 }
 
 @end
